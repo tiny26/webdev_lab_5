@@ -8,12 +8,7 @@
         "publicationYear": 1925,
         "genres": ["Fiction", "Classics"]
         },
-    ]
-}
 
-{
-    "Book 2":
-    [
         {
         "title": "To Kill a Mockingbird",
         "author": "Harper Lee",
