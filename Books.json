@@ -1,5 +1,6 @@
 {
-    "Books": [
+    "Books": 
+    [
       {
         "Book": "Book 1",
         "title": "The Great Gatsby",
@@ -15,4 +16,4 @@
         "genres": ["Fiction", "Coming-of-Age"]
       }
     ]
-  }  
+}
