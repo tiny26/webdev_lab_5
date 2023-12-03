@@ -6,39 +6,36 @@
   <title>Books Info</title>
 </head>
 <body>
+    <h1>Book Informations</h1>
+    <script>
+    var jsonData = {
+        "Books": [
+        {
+            "Book": "Book 1",
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "publicationYear": 1925,
+            "genres": ["Fiction", "Classics"]
+        },
+        {
+            "Book": "Book 2",
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "publicationYear": 1960,
+            "genres": ["Fiction", "Coming-of-Age"]
+        }
+        ]
+    };
 
-<h1>Book Informations</h1>
-
-<script>
-  var jsonData = {
-    "Books": [
-      {
-        "Book": "Book 1",
-        "title": "The Great Gatsby",
-        "author": "F. Scott Fitzgerald",
-        "publicationYear": 1925,
-        "genres": ["Fiction", "Classics"]
-      },
-      {
-        "Book": "Book 2",
-        "title": "To Kill a Mockingbird",
-        "author": "Harper Lee",
-        "publicationYear": 1960,
-        "genres": ["Fiction", "Coming-of-Age"]
-      }
-    ]
-  };
-
-  // Loop through each book and display details
-  for (var i = 0; i < jsonData.Books.length; i++) {
-    var book = jsonData.Books[i];
-    document.body.innerHTML += "<h2>" + book.title + "</h2>";
-    document.body.innerHTML += "<p><strong>Author:</strong> " + book.author + "</p>";
-    document.body.innerHTML += "<p><strong>Publication Year:</strong> " + book.publicationYear + "</p>";
-    document.body.innerHTML += "<p><strong>Genres:</strong> " + book.genres.join(", ") + "</p>";
-    document.body.innerHTML += "<hr>";
-  }
-</script>
-
+    // Loop through each book and display details
+    for (var i = 0; i < jsonData.Books.length; i++) {
+        var book = jsonData.Books[i];
+        document.body.innerHTML += "<h2>" + book.title + "</h2>";
+        document.body.innerHTML += "<p><strong>Author:</strong> " + book.author + "</p>";
+        document.body.innerHTML += "<p><strong>Publication Year:</strong> " + book.publicationYear + "</p>";
+        document.body.innerHTML += "<p><strong>Genres:</strong> " + book.genres.join(", ") + "</p>";
+        document.body.innerHTML += "<hr>";
+    }
+    </script>
 </body>
 </html>
