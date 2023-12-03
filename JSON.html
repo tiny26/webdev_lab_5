@@ -3,35 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Details</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Books Details</title>
 </head>
 <body>
 
-<h1>Book Details</h1>
+<h1>Books Details</h1>
 
 <script>
-  // Assume your JSON data is stored in a variable named 'books'
-  var books = [
-    {
-      "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "publicationYear": 1925,
-      "genres": ["Fiction", "Classics"]
-    },
-    {
-      "title": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "publicationYear": 1960,
-      "genres": ["Fiction", "Coming-of-Age"]
-    }
-  ];
+  var jsonData = {
+    "Books": [
+      {
+        "Book": "Book 1",
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "publicationYear": 1925,
+        "genres": ["Fiction", "Classics"]
+      },
+      {
+        "Book": "Book 2",
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "publicationYear": 1960,
+        "genres": ["Fiction", "Coming-of-Age"]
+      }
+    ]
+  };
 
-  // (a) The title of the first book.
-  document.body.innerHTML += "<p>(a) Title of the first book: " + books[0].title + "</p>";
+  // Loop through each book and display details
+  for (var i = 0; i < jsonData.Books.length; i++) {
+    var book = jsonData.Books[i];
+    document.body.innerHTML += "<h2>" + book.title + "</h2>";
+    document.body.innerHTML += "<p><strong>Author:</strong> " + book.author + "</p>";
+    document.body.innerHTML += "<p><strong>Publication Year:</strong> " + book.publicationYear + "</p>";
+    document.body.innerHTML += "<p><strong>Genres:</strong> " + book.genres.join(", ") + "</p>";
+    document.body.innerHTML += "<hr>";
+  }
+</script>
 
-  // (b) The author of the second book.
-  document.body.innerHTML += "<p>(b) Author of the second book: " + books[1].author + "</p>";
-
-  // (c) The genres of all books.
- 
+</body>
+</html>
